@@ -12,17 +12,52 @@ NOTE: use a `for` loop to make this happen.
 
 */
 
-function sum(options){
+function convertStringToArray(string){
+	var array = string.split(',');
+	var i = 0;	
+	var newArray = [];
+	  while(i<array.length){
+        var temp = parseInt(array[i]);
+        newArray.push(temp);
+        i++;
+	} return newArray;
+};
+
+
+function sumTotal(options){
    var total = 0;
    var i = 0;
    while(i<options.length){
    	total += options[i];
      i++;
-   }; return total;
-}
-/* this function will work as long as an array is being input, 
-  may need to be refactored to take in single digits and then push
-  those to an array */
+   }; return '$' + total.toFixed(2);
+};
 
-array = [3,4,5,6]
-sum(array)
+
+function count(array){
+   selectedPrices = array.length;
+   return selectedPrices;
+};
+
+function sumSelected(array){
+   var total = 0;
+   var i = 0;
+   while(i<options.length){
+   	total += options[i];
+     i++;
+   }; return '$' + total.toFixed(2);
+};
+
+function totalAvg(options){
+    var total = 0;
+    var i = 0;
+    while(i<options.length){
+    	total += options[i];
+    	i++;
+    } var avg = total/options.length;
+        return '$' + avg.toFixed(2);
+}
+
+
+
+
