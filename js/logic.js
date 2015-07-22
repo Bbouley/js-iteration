@@ -12,7 +12,7 @@ NOTE: use a `for` loop to make this happen.
 
 */
 
-function convertStringToArray(string){
+function convertNumStringToArray(string){
 	var array = string.split(',');
 	var i = 0;
 	var newArray = [];
@@ -21,6 +21,17 @@ function convertStringToArray(string){
         newArray.push(temp);
         i++;
 	} return newArray;
+}
+
+function convertNamesToArray(string){
+  var array = string.split('\n');
+  var i = 0;
+  var newArray = [];
+    while(i<array.length){
+        var temp = array[i];
+        newArray.push(temp);
+        i++;
+  } return newArray;
 }
 
 

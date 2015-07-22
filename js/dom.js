@@ -31,7 +31,7 @@ sumAll.onclick = function(){
       valueString += ',' + value[0][i].value;
       i++;
     }
-   var valueArray = convertStringToArray(valueString);
+   var valueArray = convertNumStringToArray(valueString);
    var total = sumTotal(valueArray);
    answerBox.innerHTML = total;
 };
@@ -45,7 +45,7 @@ sumSelected.onclick = function(){
       selectString += value[0][i].value + ',';
     } i++;
   }  var tempString = selectString + '0';
-     var selectedArray = convertStringToArray(tempString);
+     var selectedArray = convertNumStringToArray(tempString);
      var selectedTotal = sumTotal(selectedArray);
      answerBox.innerHTML = selectedTotal;
 };
@@ -59,10 +59,10 @@ countSelected.onclick = function(){
       selectString += value[0][i].value + ',';
     } i++;
   }  var tempString = selectString + '0';
-     var selectedArray = convertStringToArray(tempString);
+     var selectedArray = convertNumStringToArray(tempString);
      var selectedCount = count(selectedArray);
      answerBox.innerHTML = selectedCount -1;
-}
+};
 
 
 averageAll.onclick = function(){
@@ -72,10 +72,10 @@ averageAll.onclick = function(){
       valueString += ',' + value[0][i].value;
       i++;
     }
-   var valueArray = convertStringToArray(valueString);
+   var valueArray = convertNumStringToArray(valueString);
    var average = totalAvg(valueArray);
    answerBox.innerHTML = average;
-}
+};
 
 
 averageSelected.onclick = function(){
@@ -86,11 +86,11 @@ averageSelected.onclick = function(){
       selectString += value[0][i].value + ',';
     } i++;
   }  var tempString = selectString + '0';
-     var selectedArray = convertStringToArray(tempString);
+     var selectedArray = convertNumStringToArray(tempString);
      selectedArray.splice(-1);
      var selectedAverage = totalAvg(selectedArray);
      answerBox.innerHTML = selectedAverage;
-}
+};
 
 
 
