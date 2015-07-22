@@ -13,6 +13,7 @@ var lastNames = document.getElementById('last-names');
 var namesWithLength = document.getElementById('names-with-lengths');
 
 printNames.onclick = function(){
+  answerBox.innerHTML = null;
   for (var i = 0; i < arrayNames.length; i++) {
     var p = document.createElement('p');
     p.innerHTML = arrayNames[i];
@@ -21,6 +22,7 @@ printNames.onclick = function(){
 };
 
 firstNames.onclick = function(){
+  answerBox.innerHTML = null;
   for (var i = 0; i < arrayNames.length; i++) {
     var firstName = arrayNames[i].slice(0, arrayNames[i].indexOf(' '));
     var p = document.createElement('p');
@@ -30,6 +32,7 @@ firstNames.onclick = function(){
 };
 
 lastNames.onclick = function(){
+  answerBox.innerHTML = null;
 for (var i = 0; i < arrayNames.length; i++) {
     var firstName = arrayNames[i].slice(arrayNames[i].indexOf(' ')+1);
     var p = document.createElement('p');
@@ -39,6 +42,7 @@ for (var i = 0; i < arrayNames.length; i++) {
 };
 
 namesWithLength.onclick = function(){
+  answerBox.innerHTML = null;
    for (var i = 0; i < arrayNames.length; i++) {
     var p = document.createElement('p');
     p.innerHTML = arrayNames[i] + ' - ' +arrayNames[i].length;
