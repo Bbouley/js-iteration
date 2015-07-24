@@ -18,6 +18,7 @@ printNames.onclick = function(){
     var p = document.createElement('p');
     p.innerHTML = arrayNames[i];
     answerBox.appendChild(p);
+    debugger;
   }
 };
 
